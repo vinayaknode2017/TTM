@@ -2,11 +2,66 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
+    title: 'Student',
+    icon: 'award-outline',
+    link: '/pages/students',
+    home: true
+  },
+  {
+    title: 'Staff Details',
+    icon: 'person-outline',
+    children: [
+      {
+        title: 'Teachers',
+        link: '/pages/staffs'
+      },
+      {
+        title: 'Teachers Leave Details',
+        link: '/pages/leaves'
+      }
+    ]
+  },
+  {
+    title: 'Standard and Section',
+    icon: 'bar-chart-2-outline',
+    link: '/pages/standards',
+    home: true
+  },
+  {
+    title: 'Medium',
+    icon: 'grid-outline',
+    link: '/pages/mediums',
+    home: true
+  },
+  {
+    title: 'Books',
+    icon: 'book-open-outline',
+    link: '/pages/books',
+    home: true
+  },
+  {
+    title: 'Time Table',
+    icon: 'calendar-outline',
+    link: '/pages/timetables',
+    home: true
+  },
+  {
+    title: 'User',
+    icon: 'people-outline',
+    link: '/pages/users',
+    home: true
+  },
+  {
+    title: 'OTHERS',
+    group: true,
+  },
+  {
     title: 'E-commerce',
     icon: 'shopping-cart-outline',
     link: '/pages/dashboard',
     home: true,
   },
+  
   {
     title: 'IoT Dashboard',
     icon: 'home-outline',

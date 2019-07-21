@@ -5,11 +5,57 @@ import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import { StudentComponent } from './students/student.component';
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
+    {
+      path: 'students',
+      loadChildren: () => import('./students/students.module')
+        .then(m => m.StudentsModule),
+    },
+    {
+      path: 'staffs',
+      loadChildren: () => import('./staffs/staffs.module')
+        .then(m => m.StaffsModule),
+    },
+    {
+      path: 'leaves',
+      loadChildren: () => import('./leaves/leaves.module')
+        .then(m => m.LeavesModule),
+    },
+    {
+      path: 'standards',
+      loadChildren: () => import('./standards/standards.module')
+        .then(m => m.StandardsModule),
+    },
+    {
+      path: 'subjects',
+      loadChildren: () => import('./subjects/subjects.module')
+        .then(m => m.SubjectsModule),
+    },
+    {
+      path: 'timetables',
+      loadChildren: () => import('./timetables/timetables.module')
+        .then(m => m.TimetablesModule),
+    },
+    {
+      path: 'users',
+      loadChildren: () => import('./users/users.module')
+        .then(m => m.UsersModule),
+    },
+    {
+      path: 'books',
+      loadChildren: () => import('./books/books.module')
+        .then(m => m.BooksModule),
+    },
+    {
+      path: 'mediums',
+      loadChildren: () => import('./mediums/mediums.module')
+        .then(m => m.MediumsModule),
+    },
     {
       path: 'dashboard',
       component: ECommerceComponent,
